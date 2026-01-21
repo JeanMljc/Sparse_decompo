@@ -90,11 +90,17 @@ More details at :
 ### Algorithms for non-convex criteria 
 
 * `IRL1_1ST_cplex.m` solves non-convex problem : 
-$$ \min_{(x,p) \in \mathcal{C}_1} \quad J(x) + \alpha L_1(p) + \alpha' ||x||_p  $$
+
+$$\min_{(x,p) \in \mathcal{C}_1} \quad J(x) + \alpha L_1(p) + \alpha' ||x||_p$$
+
 * `IRL1_2ND_cplex.m` solves non-convex problem : 
-$$ \min_{(x,p) \in \mathcal{C}_1} \quad J(x) + \alpha L_2(p) + \alpha' ||x||_p  $$
-* `IRL1_LP_cplex.m` solves non-convex problem : 
-$$ \min_{x \geq 0} \quad J(x) + \lambda ||x||_p  $$
+
+$$\min_{(x,p) \in \mathcal{C}_1} \quad J(x) + \alpha L_2(p) + \alpha' ||x||_p$$
+
+* `IRL1_LP_cplex.m` solves non-convex problem :
+
+$$\min_{x \geq 0} \quad J(x) + \lambda ||x||_p$$
+
 These functions are implementations of IRL1 algorithmic scheme : each iteration amounts to solving $Q_1(x,p,w), Q_2(x,p,w)$ or _weighted_ $\ell_1$ problem under positivity constraints. We use `Algo_CPLEX_1ST_QP.m`, `Algo_CPLEX_2ND_QP.m`, `Algo_CPLEX_WL1.m` to do so.
 
 #### Other approaches
